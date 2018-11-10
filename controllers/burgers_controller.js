@@ -13,6 +13,7 @@ router.get('/', function (req, res) {
         res.render('index', hbsObject);
     });
 });
+
 // ROUTER POST FUNCTION 
 router.post('/api/burgers', (req, res) => {
     burger.create([req.params.name], (result) => {
