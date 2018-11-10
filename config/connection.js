@@ -18,3 +18,5 @@ connection.connect (function (err) {
     console.log("You are connected on" + connection.threadId)
 });
 
+// EXPORT CONNECTION FOR ORM TO USE
+module.exports = connection;
