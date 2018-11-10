@@ -1,0 +1,2 @@
+// IMPORT THE ORM TO CREATE FUNCTIONS USIGNG BURGER SPECIFIC INPUT FOR THE ORM
+const orm = require('../config/orm.js')
