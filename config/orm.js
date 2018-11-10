@@ -42,3 +42,6 @@ const orm = {
         });
     }
 };
+
+// EXPORT ORM OBJECT 
+module.exports = orm;
