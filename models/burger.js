@@ -8,5 +8,14 @@ let burger = {
             cb(res);          
         });
     },
-    
+    create: (values, cb) => {
+        orm.insertOne("burgers", condition, (res) => {
+            cb(res);
+        });
+    },
+    update: (condition, cb) => {
+        orm.updateOne("burgers", condition, (res) => {
+            cb(res);
+        });
+    }
 }
