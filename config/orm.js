@@ -28,5 +28,17 @@ const orm = {
             cb(result);
         });
     },
-    
-}
+    // updateOne = UPDATE AN ITEM ON THE TABLE
+    updateOne: (table, condidition, cb) => {
+        let queryString = 'UPDATE' + table;
+        queryString += ' SET devoured = true';
+        queryString += ' WHERE ' + condition + ';';
+        console.log(queryString);
+        connection.query(queryString, (err, result) => {
+            if (err) {
+                throw err;
+            }
+            cb (result);
+        });
+    }
+};
