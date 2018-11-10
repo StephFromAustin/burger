@@ -15,6 +15,6 @@ connection.connect (function (err) {
         console.error("error connecting", + err.stack);
         return;
     }
-    console.log("You are connected on" connection.threadId)
+    console.log("You are connected on" + connection.threadId)
 });
 
