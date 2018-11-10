@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     host:"localhost",
     port: 3306,
     user:"root", 
-    password: "root",
+    password: "Steph2845",
     database: "burgers_db"
 });
 
@@ -15,7 +15,7 @@ connection.connect (function (err) {
         console.error("error connecting", + err.stack);
         return;
     }
-    console.log("You are connected on" + connection.threadId)
+    console.log("You are connected on" + connection.threadId);
 });
 
 // EXPORT CONNECTION FOR ORM TO USE
