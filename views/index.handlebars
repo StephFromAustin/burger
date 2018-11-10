@@ -1,0 +1,75 @@
+{{!-- BODY --}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="jumbotron jumbotron-fluid burger-title">
+                <div class="container">
+                    <h1 class="text-white">Eat the Burgers!</h1>
+                </div>
+            </div>
+            <img src="/assets/imgages/burgerMenu.png" alt="Burger">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card burger-list">
+                <div class="card-header text-center">
+                    <h2>List of your  Burgers:</h2>
+                </div>
+                <div class="card-body">
+                    <ol>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                <li class="burger">
+                                    {{burger_name}}
+
+                                    <button class="burg-eat" data-id='{{id}}'>FINISH IT!!</button>
+                                </li>
+                            {{/unless}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card burger-list">
+                <div class="card-header text-center">
+                    <h2>List of Your Devoured Burgers:</h2>
+                </div>
+                <div class="card-body">
+                    <ol>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                <li>
+                                    {{burger_name}}
+                                </li>
+                            {{/if}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card burger-form">
+                <div class="card-header text-center">
+                    <h2>Add a New Burger:</h2>
+                </div>
+                <div class="card-body">
+                    <form class='create-burg text-center' method="POST" action="/api/burgers">
+
+                        <div class="form-group">
+                            <label for="burg">Burger Name:</label>
+                            <input class="form-control" type="text" id="burg" name="name" aria-describedby="burger-note">
+                            <small id="burger-note" class="form-text text-muted">Taste Town Starts Here!</small>
+                        </div>
+
+                        <button type="submit">Add a Burger:</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

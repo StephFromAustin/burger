@@ -36,4 +36,4 @@ router.put('/api/burgers/:id', (req, res) => {
 })
 
 // EXPORT ROUTER 
-module.exports = router
+module.exports = router;
