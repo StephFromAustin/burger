@@ -20,5 +20,17 @@ let burger = {
     }
 }
 
+burger.all((res) => {
+        console.log(res);
+    });
+    
+    burger.create(['The Googe Burger'], (res) => {
+        console.log(res);
+    });
+    
+    burger.update('id = 1', (res) => {
+        console.log(res);
+    }); 
+
 // EXPORT ROUTER 
 module.exports = burger;
