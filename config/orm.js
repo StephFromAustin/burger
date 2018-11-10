@@ -29,7 +29,7 @@ const orm = {
         });
     },
     // updateOne = UPDATE AN ITEM ON THE TABLE
-    updateOne: (table, condidition, cb) => {
+    updateOne: (table, condition, cb) => {
         let queryString = 'UPDATE' + table;
         queryString += ' SET devoured = true';
         queryString += ' WHERE ' + condition + ';';
