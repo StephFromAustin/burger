@@ -14,7 +14,11 @@ router.get('/', function (req, res) {
     });
 });
 // ROUTER POST FUNCTION 
-
+router.post('/api/burgers', (req, res) => {
+    burger.create([req.params.name], (result) => {
+        res.redirect('/')
+    });
+});
 
 // ROUTER PUT FUNCTION 
 
