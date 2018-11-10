@@ -8,19 +8,17 @@ if (process.env.JAWSDB_URL) {
         host: "localhost",
         port: 3306,
         user: "root",
-        password: process.env.mysqlPassword,
+        password: "Steph2845",
         database: "burgers_db"
     });
 };
 
-    // CONNECTION CODE 
-    connection.connect(function (err) {
-        if (err) {
-            console.error("error connecting", + err.stack);
-            return;
-        }
-        console.log("You are connected on" + connection.threadId);
-    });
+connection.connect(function(err) {
+    if (err) {
+      console.error("error connecting: " + err.stack);
+      return;
+    }
+    console.log("connected as id " + connection.threadId);
+});
 
-    // EXPORT CONNECTION FOR ORM TO USE
-    module.exports = connection;
+module.exports = connection;
