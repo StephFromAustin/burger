@@ -17,9 +17,10 @@ app.set ("view engine", "handlebars");
 
 // IMPORT ROUTER || ALLOW SERVER ACCESS 
 const routes = require("./controllers/burgers_controller.js")
-app.use(function (req, res, next) {
-    next()
-});
+// app.use(function (req, res, next) {
+//     next()
+// });
+app.use(routes);
 
 // START SERVER || LISTEN TO CLIENT REQUEST || NOTIFY IF LISTENING
 app.listen(PORT, () => {
