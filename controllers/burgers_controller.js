@@ -4,7 +4,7 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 // ROUTER GET FUNCTION 
-router.get('/burger', function (req, res) {
+router.get('/', function (req, res) {
     burger.all((data)=> {
         let hbsObject = {
             burgers: data
@@ -15,7 +15,7 @@ router.get('/burger', function (req, res) {
 });
 
 // ROUTER POST FUNCTION 
-router.post('/api/burger', (req, res) => {
+router.post('/api/burgers', (req, res) => {
     burger.create([req.params.name], (result) => {
         res.redirect('/burger')
     });
@@ -23,7 +23,7 @@ router.post('/api/burger', (req, res) => {
 
 // ROUTER PUT FUNCTION 
 
-router.put('/api/burger/:id', (req, res) => {
+router.put('/api/burgers/:id', (req, res) => {
     const condition = 'id =' + req.params.id
     console.log('condition', condition);
     burger.update(condition, (result) => {
