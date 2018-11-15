@@ -7,7 +7,7 @@
                     <h1 class="text-white">Eat the Burgers!</h1>
                 </div>
             </div>
-            <img src="/assets/imgages/burgerMenu.png" alt="Burger">
+            <img src="/burger/burger/public/images/menu2.jpg" alt="BobMenu">
         </div>
     </div>
     <div class="row">
@@ -22,8 +22,7 @@
                             {{#unless devoured}}
                                 <li class="burger">
                                     {{burger_name}}
-
-                                    <button class="burg-eat" data-id='{{id}}'>FINISH IT!!</button>
+                                    <button class="eatburger" data-id='{{id}}'>FINISH</button>
                                 </li>
                             {{/unless}}
                         {{/each}}
@@ -62,7 +61,7 @@
 
                         <div class="form-group">
                             <label for="burg">Burger Name:</label>
-                            <input class="form-control" type="text" id="burg" name="name" aria-describedby="burger-note">
+                            <input class="form-control" type="text" id="burg" name="burger_name" aria-describedby="burger-note">
                             <small id="burger-note" class="form-text text-muted">Taste Town Starts Here!</small>
                         </div>
 

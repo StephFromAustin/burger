@@ -16,15 +16,15 @@ router.get('/', function (req, res) {
 
 // ROUTER POST FUNCTION 
 router.post('/api/burgers', (req, res) => {
-    burger.create([req.params.name], (result) => {
-        res.redirect('/burger')
+    burger.create(req.body.burger_name, (result) => {
+        res.redirect('/')
     });
 });
 
 // ROUTER PUT FUNCTION 
 
 router.put('/api/burgers/:id', (req, res) => {
-    const condition = 'id =' + req.params.id
+    const condition = req.params.id
     console.log('condition', condition);
     burger.update(condition, (result) => {
         if (result.changedRows === 0) {

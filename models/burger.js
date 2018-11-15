@@ -9,12 +9,12 @@ let burger = {
         });
     },
     create: (values, cb) => {
-        orm.insertOne("burgers", condition, (res) => {
+        orm.insertOne(values, (res) => {
             cb(res);
         });
     },
     update: (condition, cb) => {
-        orm.updateOne("burgers", condition, (res) => {
+        orm.updateOne(condition, (res) => {
             cb(res);
         });
     }
