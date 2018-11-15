@@ -1,6 +1,6 @@
 // MySQL CONNECTION SET UP 
 const mysql = require("mysql"); //
-const conenction;
+const connection;
 //DEPENDENCIES 
 
 // CONNECTION SET UP 
