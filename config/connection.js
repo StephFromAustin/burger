@@ -4,7 +4,7 @@ let connection;
 //DEPENDENCIES 
 
 // CONNECTION SET UP 
-if (process.env.JWSDB_URL){
+if (process.env.JAWSDB_URL){
     connection = mysql.createConnection(process.env.JAWSDB_URL)
 ;} else {
     connection = mysql.createConnection({
